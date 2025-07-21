@@ -1,0 +1,75 @@
+/* PORTFOLIO CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root{--primary:#007bff;--primary-dark:#0056b3;--light:#ffffff;--dark:#212529;--bg:#f8f9fa;--text:#343a40;--border-radius:10px;--accent:#0077ff;--shadow:0 2px 5px rgba(0,0,0,0.1);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background-color:var(--bg);color:var(--text);line-height:1.6;scroll-behavior:smooth;}
+.container{width:90%;max-width:1100px;margin:0 auto;padding-left:1rem;padding-right:1rem;}
+/* Header */
+header{background-color:var(--light);box-shadow:var(--shadow);position:sticky;top:0;z-index:1000;padding:1rem 0;}
+.header-container{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:0 2rem;}
+.site-logo{font-size:1.8rem;font-weight:700;color:var(--primary);letter-spacing:0.5px;}
+.nav-links{list-style:none;display:flex;gap:2rem;}
+.nav-links li a{text-decoration:none;font-size:1rem;font-weight:500;color:var(--text);transition:color 0.3s ease,border-bottom 0.3s ease;position:relative;}
+.nav-links li a:hover{color:var(--primary);}
+.nav-links li a::after{content:'';position:absolute;width:0;height:2px;background:var(--primary);left:0;bottom:-4px;transition:width 0.3s;}
+.nav-links li a:hover::after{width:100%;}
+/* Section Layouts */
+section{padding:5rem 2rem;}
+.hero-section{display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:linear-gradient(to right,#e3f2fd,#f1f8ff);min-height:90vh;}
+.hero-section h1{font-size:3rem;color:var(--primary-dark);}
+.hero-section p{font-size:1.2rem;max-width:600px;margin-top:1rem;}
+.about-image img.profile-image{width:280px;height:280px;border-radius:50%;object-fit:cover;border:4px solid #0077ff;box-shadow:0 8px 16px rgba(0,0,0,0.1);margin-top:-90px;}
+.about-section,.projects-section,.contact-section{max-width:1100px;margin:0 auto;}
+.about-section h2,.projects-section h2,.contact-section h2{text-align:center;font-size:2.5rem;margin-bottom:2rem;color:var(--primary-dark);position:relative;}
+.about-section h2::after,.projects-section h2::after,.contact-section h2::after{content:'';width:60px;height:4px;background:var(--accent);display:block;margin:10px auto 0;border-radius:2px;}
+/* About Section */
+.about-section{background-color:#fdfdfd;padding:80px 20px;color:#333;}
+.section-title{text-align:center;font-size:36px;margin-bottom:50px;color:var(--accent);}
+.about-wrapper{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;}
+.about-image img.profile-image{width:280px;height:280px;border-radius:50%;object-fit:cover;border:4px solid var(--accent);box-shadow:0 8px 16px rgba(0,0,0,0.1);}
+.about-text{max-width:600px;font-size:18px;line-height:1.7;}
+.about-text p{margin-bottom:20px;}
+.skills-container{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-top:2rem;}
+.skill-tag{background-color:var(--accent);color:#fff;padding:0.5rem 1rem;border-radius:20px;font-size:0.9rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:0.5rem;transition:transform 0.3s ease,background-color 0.3s ease;}
+.skill-tag i{font-size:1rem;}
+.skill-tag:hover{background-color:var(--accent-dark);transform:scale(1.05);cursor:default;}
+/* Projects Section*/
+.projects-section{background-color:var(--light);padding:4rem 2rem;max-width:1100px;margin:0 auto}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;padding:0 1rem}
+.project-card{background-color:var(--bg);padding:1.5rem;border-radius:var(--border-radius);box-shadow:var(--shadow);transition:transform 0.3s ease,box-shadow 0.3s ease;cursor:pointer}
+.project-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 6px 20px rgba(0,0,0,0.12)}
+.project-title{font-size:1.25rem;font-weight:600;margin-bottom:0.5rem;color:var(--primary);font-family:'Poppins',sans-serif}
+.project-description{font-size:1rem;margin-bottom:1rem;color:var(--text);line-height:1.5}
+.project-link{text-decoration:none;color:var(--primary);font-weight:500;position:relative;font-family:'Poppins',sans-serif}
+.project-link::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background-color:var(--primary-dark);transition:width 0.3s ease}
+.project-link:hover::after{width:100%}
+/*Contact Section*/
+.contact-section{padding:60px 20px;background-color:#f5f7fa;text-align:center}
+.contact-section form{max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
+.contact-section input,.contact-section textarea{padding:0.75rem 1rem;border:1px solid #ccc;border-radius:6px;font-size:1rem;font-family:'Poppins',sans-serif}
+.contact-form{max-width:500px;margin:40px auto 0;display:flex;flex-direction:column;gap:1rem}
+.contact-section form button{padding:10px 20px;background-color:#007bff;color:white;font-size:14px;border:none;border-radius:6px;cursor:pointer;transition:background 0.3s ease}
+.contact-section form button:hover{background-color:#0056b3}
+.contact-intro{max-width:600px;margin:0 auto 25px;font-size:16px;color:#555}
+.contact-card{background:#fff;padding:25px 30px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.08);display:inline-block;margin-top:15px;margin-bottom:10px}
+.email-wrapper{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:15px;font-size:16px;color:#333}
+.email-wrapper i{font-size:18px;color:#007bff}
+.contact-email{color:#007bff;text-decoration:none;font-weight:500}
+.contact-email:hover{text-decoration:underline}
+.btn{display:inline-block;padding:8px 18px;background-color:#007bff;color:white;font-size:14px;border-radius:6px;text-decoration:none;transition:background 0.3s ease}
+.btn:hover{background-color:#0056b3}
+/* Footer */
+footer{background-color:#0056b3;color:#fff;padding:40px 0;text-align:center;font-size:16px}
+.footer-container{width:90%;max-width:1200px;margin:0 auto}
+.footer-text{margin-bottom:15px;font-weight:400;letter-spacing:0.5px}
+.social-links{display:flex;justify-content:center;gap:30px}
+.social-links a{color:#fff;text-decoration:none;font-size:18px;transition:color 0.3s ease;display:flex;align-items:center;gap:8px}
+.social-links a:hover{color:#00bcd4}
+.social-links i{font-size:20px}
+   /* Responsive Styles */
+@media (max-width:768px){
+  .header-container{flex-direction:column;align-items:flex-start;gap:1rem}
+  .nav-links{flex-direction:column;gap:0.75rem;width:100%}
+  .hero-section h1{font-size:2.25rem}
+  section{padding:3rem 1.5rem}
+}
